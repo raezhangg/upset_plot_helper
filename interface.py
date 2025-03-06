@@ -8,7 +8,7 @@ from PyQt6.QtWidgets import (
 )
 
 
-class UpSetMatrixApp(QWidget):
+class UpsetPlotHelper(QWidget):
     def __init__(self):
         super().__init__()
         self.set_data = {}  # Dictionary to store set data
@@ -16,7 +16,7 @@ class UpSetMatrixApp(QWidget):
 
     def init_ui(self):
         """Initialize the GUI layout"""
-        self.setWindowTitle("UpSet Matrix Generator")
+        self.setWindowTitle("UpSet Plot Helper")
         self.setGeometry(200, 200, 600, 500)
 
         layout = QVBoxLayout()
@@ -173,6 +173,6 @@ class UpSetMatrixApp(QWidget):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = UpSetMatrixApp()
+    window = UpsetPlotHelper()
     window.show()
     sys.exit(app.exec())
